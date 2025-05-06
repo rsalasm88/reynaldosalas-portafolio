@@ -1,5 +1,5 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, readable font */
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, readable font */
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -219,4 +219,69 @@ footer {
     .skills-container {
         grid-template-columns: 1fr; /* Stack skills vertically on small screens */
     }
+}
+
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+header {
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    color: white;
+    padding: 4em 0;
+    text-align: center;
+    border-bottom: 4px solid #e74c3c;
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.linkedin-button {
+    display: inline-block;
+    background: linear-gradient(45deg, #0077b5, #00a0dc);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.linkedin-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+nav a {
+    color: #fff;
+    text-shadow: 0 0 5px #e74c3c, 0 0 10px #e74c3c;
+    transition: text-shadow 0.3s ease;
+}
+
+nav a:hover {
+    text-shadow: 0 0 8px #fff, 0 0 12px #e74c3c, 0 0 20px #e74c3c;
+    
+}
+
+.tech-logo-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.tech-logo-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
